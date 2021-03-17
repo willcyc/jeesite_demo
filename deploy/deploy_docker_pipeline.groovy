@@ -22,7 +22,6 @@ pipeline {
         stage('设定配置文件'){
             steps{
                 sh '''
-                    . ~/.bash_profile
             
                     export os_type=`uname`
                     cd ${WORKSPACE}/web/bin/docker
@@ -44,7 +43,6 @@ pipeline {
         stage('Maven 编译'){
             steps {
                 sh '''
-                    . ~/.bash_profile 
                     
                     cd ${WORKSPACE}/root
                     mvn clean install -Dmaven.test.skip=true
