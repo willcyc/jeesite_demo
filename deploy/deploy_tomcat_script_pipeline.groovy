@@ -68,6 +68,7 @@ node('master') {
         sh '''
             JENKINS_NODE_COOKIE=dontkillme
             BUILD_ID=dontKillMe
+            BUILD_ID=1
             cd $tomcat_home/bin
             sh startup.sh
         '''
