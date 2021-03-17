@@ -67,8 +67,6 @@ node('master') {
     stage('启动tomcat') {
         sh '''
             JENKINS_NODE_COOKIE=dontkillme
-            BUILD_ID=dontKillMe
-            JENKINS_NODE_COOKIE="dontKillMe"
             cd $tomcat_home/bin
             sh startup.sh
         '''
