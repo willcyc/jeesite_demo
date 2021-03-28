@@ -28,6 +28,8 @@ pipeline {
                     if [[ "${env}" == "prod" ]]; then
                         export mysql_ip=127.0.0.1
                         export mysql_port=3309
+                        export mysql_user=root
+                        export mysql_pwd=123456
                     else
                         export mysql_ip=127.0.0.1
                         export mysql_port=3306
