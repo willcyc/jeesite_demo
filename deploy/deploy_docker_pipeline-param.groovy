@@ -26,11 +26,13 @@ pipeline {
                 sh '''
                     
                     if [[ "${env}" == "prod" ]]; then
-                        export mysql_ip=${mysql_prod_ip}
-                        export mysql_port=${mysql_prod_port}
+                        export mysql_ip=127.0.0.1
+                        export mysql_port=3309
                     else
-                        export mysql_ip=${mysql_qa_ip}
-                        export mysql_port=${mysql_qa_port}
+                        export mysql_ip=127.0.0.1
+                        export mysql_port=3306
+                        export mysql_user=root
+                        export mysql_pwd=123456
                     fi
                     
                     export os_type=`uname`
